@@ -61,10 +61,12 @@
     <Content Include="src\app.js" />
     <Content Include="src\app-run.js" />
     <Content Include="src\app\common\commonmodule.js" />
+    <Content Include="src\app\common\directives\templatedirectives.js" />
     <Content Include="src\app\common\views\home.html" />
     <Content Include="src\app\users\controllers\usercontroller.js" />
     <Content Include="src\app\users\services\userfactory.js" />
     <Content Include="src\app\users\views\users.html" />
+    <Content Include="src\app\common\views\header.tmpl.html" />
     <Content Include="src\index.html" />
     <Content Include="src\app\users\usermodule.js" />
     <None Include="src\less\theme.less" />
