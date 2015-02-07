@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0392664B-4EAC-46C9-B64C-C39CA4F4ADCC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPhillipsConsultants.Demo.Ui</RootNamespace>
+    <AssemblyName>MPhillipsConsultants.Demo.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app-routes.js" />
+    <Content Include="src\app.js" />
+    <Content Include="src\app-run.js" />
+    <Content Include="src\app\common\commonmodule.js" />
+    <Content Include="src\app\common\views\home.html" />
+    <Content Include="src\app\users\controllers\usercontroller.js" />
+    <Content Include="src\app\users\services\userfactory.js" />
+    <Content Include="src\app\users\views\users.html" />
+    <Content Include="src\index.html" />
+    <Content Include="src\app\users\usermodule.js" />
+    <None Include="src\less\theme.less" />
+    <Content Include="vendor\angular-resource\angular-resource.js" />
+    <Content Include="vendor\angular-resource\angular-resource.min.js" />
+    <Content Include="vendor\angular-route\angular-route.js" />
+    <Content Include="vendor\angular-route\angular-route.min.js" />
+    <Content Include="vendor\angularjs\angular-csp.css" />
+    <Content Include="vendor\angularjs\angular.js" />
+    <Content Include="vendor\angularjs\angular.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vendor\angularjs\.bower.json" />
+    <Content Include="vendor\angularjs\angular.min.js.gzip" />
+    <Content Include="vendor\angularjs\angular.min.js.map" />
+    <Content Include="vendor\angularjs\bower.json" />
+    <Content Include="vendor\angularjs\package.json" />
+    <Content Include="vendor\angularjs\README.md" />
+    <Content Include="src\less\bootstrap\.csscomb.json" />
+    <Content Include="src\less\bootstrap\.csslintrc" />
+    <Content Include="src\less\bootstrap\alerts.less" />
+    <Content Include="src\less\bootstrap\badges.less" />
+    <Content Include="src\less\bootstrap\bootstrap.less" />
+    <Content Include="src\less\bootstrap\breadcrumbs.less" />
+    <Content Include="src\less\bootstrap\button-groups.less" />
+    <Content Include="src\less\bootstrap\buttons.less" />
+    <Content Include="src\less\bootstrap\carousel.less" />
+    <Content Include="src\less\bootstrap\close.less" />
+    <Content Include="src\less\bootstrap\code.less" />
+    <Content Include="src\less\bootstrap\component-animations.less" />
+    <Content Include="src\less\bootstrap\dropdowns.less" />
+    <Content Include="src\less\bootstrap\forms.less" />
+    <Content Include="src\less\bootstrap\glyphicons.less" />
+    <Content Include="src\less\bootstrap\grid.less" />
+    <Content Include="src\less\bootstrap\input-groups.less" />
+    <Content Include="src\less\bootstrap\jumbotron.less" />
+    <Content Include="src\less\bootstrap\labels.less" />
+    <Content Include="src\less\bootstrap\list-group.less" />
+    <Content Include="src\less\bootstrap\media.less" />
+    <Content Include="src\less\bootstrap\mixins.less" />
+    <Content Include="src\less\bootstrap\modals.less" />
+    <Content Include="src\less\bootstrap\navbar.less" />
+    <Content Include="src\less\bootstrap\navs.less" />
+    <Content Include="src\less\bootstrap\normalize.less" />
+    <Content Include="src\less\bootstrap\pager.less" />
+    <Content Include="src\less\bootstrap\pagination.less" />
+    <Content Include="src\less\bootstrap\panels.less" />
+    <Content Include="src\less\bootstrap\popovers.less" />
+    <Content Include="src\less\bootstrap\print.less" />
+    <Content Include="src\less\bootstrap\progress-bars.less" />
+    <Content Include="src\less\bootstrap\responsive-embed.less" />
+    <Content Include="src\less\bootstrap\responsive-utilities.less" />
+    <Content Include="src\less\bootstrap\scaffolding.less" />
+    <Content Include="src\less\bootstrap\tables.less" />
+    <Content Include="src\less\bootstrap\theme.less" />
+    <Content Include="src\less\bootstrap\thumbnails.less" />
+    <Content Include="src\less\bootstrap\tooltip.less" />
+    <Content Include="src\less\bootstrap\type.less" />
+    <Content Include="src\less\bootstrap\utilities.less" />
+    <Content Include="src\less\bootstrap\variables.less" />
+    <Content Include="src\less\bootstrap\wells.less" />
+    <Content Include="src\less\bootstrap\mixins\alerts.less" />
+    <Content Include="src\less\bootstrap\mixins\background-variant.less" />
+    <Content Include="src\less\bootstrap\mixins\border-radius.less" />
+    <Content Include="src\less\bootstrap\mixins\buttons.less" />
+    <Content Include="src\less\bootstrap\mixins\center-block.less" />
+    <Content Include="src\less\bootstrap\mixins\clearfix.less" />
+    <Content Include="src\less\bootstrap\mixins\forms.less" />
+    <Content Include="src\less\bootstrap\mixins\gradients.less" />
+    <Content Include="src\less\bootstrap\mixins\grid-framework.less" />
+    <Content Include="src\less\bootstrap\mixins\grid.less" />
+    <Content Include="src\less\bootstrap\mixins\hide-text.less" />
+    <Content Include="src\less\bootstrap\mixins\image.less" />
+    <Content Include="src\less\bootstrap\mixins\labels.less" />
+    <Content Include="src\less\bootstrap\mixins\list-group.less" />
+    <Content Include="src\less\bootstrap\mixins\nav-divider.less" />
+    <Content Include="src\less\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="src\less\bootstrap\mixins\opacity.less" />
+    <Content Include="src\less\bootstrap\mixins\pagination.less" />
+    <Content Include="src\less\bootstrap\mixins\panels.less" />
+    <Content Include="src\less\bootstrap\mixins\progress-bar.less" />
+    <Content Include="src\less\bootstrap\mixins\reset-filter.less" />
+    <Content Include="src\less\bootstrap\mixins\resize.less" />
+    <Content Include="src\less\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="src\less\bootstrap\mixins\size.less" />
+    <Content Include="src\less\bootstrap\mixins\tab-focus.less" />
+    <Content Include="src\less\bootstrap\mixins\table-row.less" />
+    <Content Include="src\less\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="src\less\bootstrap\mixins\text-overflow.less" />
+    <Content Include="src\less\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="vendor\angular-resource\.bower.json" />
+    <Content Include="vendor\angular-resource\angular-resource.min.js.map" />
+    <Content Include="vendor\angular-resource\bower.json" />
+    <Content Include="vendor\angular-resource\package.json" />
+    <Content Include="vendor\angular-resource\README.md" />
+    <Content Include="vendor\angular-route\.bower.json" />
+    <Content Include="vendor\angular-route\angular-route.min.js.map" />
+    <Content Include="vendor\angular-route\bower.json" />
+    <Content Include="vendor\angular-route\package.json" />
+    <Content Include="vendor\angular-route\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\common\tests\" />
+    <Folder Include="src\app\users\directives\" />
+    <Folder Include="src\app\users\tests\" />
+    <Folder Include="src\assets\css\" />
+    <Folder Include="src\assets\images\" />
+    <Folder Include="tests\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52827</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:70/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug call "$(SolutionDir)gulp-local-build.bat"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+{
+  "name": "MPhillipsConsultants.Demo",
+  "version": "1.0.0",
+  "authors": [
+    "Mark Phillips <work-mpconsultants@outlook.com>"
+  ],
+  "description": "Web Api 2 Angular JS Demo",
+  "main": "gulpfile.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.12",
+    "angular-resource": "~1.3.12",
+    "angular-route": "~1.3.12"
+  }
+}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app='MPhillipsConsultants.Demo.App' id="ng-app">
+<head>
+    <title>M Phillips Consultants Demostration Application</title>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="fragment" content="!" />
+    <meta id="meta-description" name="description" content="M Phillips Consultants Demostration application using EF 6.1, AngularJS and .NET MVC Web API 2" />
+    <link href="/src/assets/css/theme.css" rel="stylesheet" />
+    <script src="/vendor/angularjs/angular.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.js"></script>
+    <script src="/vendor/angular-route/angular-route.js"></script>
+    <script src="/src/app-constants.js"></script>
+    <script src="/src/app.js"></script>
+    <script src="/src/app-routes.js"></script>
+    <script src="/src/app-run.js"></script>
+</head>
+    <body>
+        <div ng-view></div>
+        <noscript>
+            <div id="noscript-padding"></div>
+        </noscript>
+        <noscript>
+            <div id="noscript-warning">
+                <h3>M Phillips Consultants Demostration site</h3>
+                <p>
+                    This application requires Javascript to be enabled. Please enable Javascript to continue using the site.
+                </p>
+            </div>
+        </noscript>
+        <!-- Common  -->
+        <script src="/src/app/common/commonmodule.js"></script>
+        <!-- Users  -->
+        <script src="/src/app/users/usermodule.js"></script>
+        <script src="/src/app/users/controllers/usercontroller.js"></script>
+        <script src="/src/app/users/services/userfactory.js"></script>
+    </body>
+</html>
+
