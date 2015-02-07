@@ -1,3 +1,6 @@
 {
-  "DEBUG": { "apiUri": "http://localhost:90" }
+  "DEBUG": { 
+		"apiUri": "http://localhost:90" ,
+		"assetPath":"/src/assets/"
+  }
 }

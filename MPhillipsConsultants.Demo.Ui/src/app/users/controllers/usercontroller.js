@@ -5,16 +5,19 @@
         .module('MPhillipsConsultants.Demo.App.User')
         .controller('userController', userController);
 
-    userController.$inject = ['$log','userFactory'];
+    userController.$inject = ['$scope','userFactory'];
 
-    function userController($log,userFactory) {
+    function userController($scope,userFactory) {
         /* jshint validthis:true */
         var vm = this;
+        vm.loaded = false;
         activate();
         function activate() {
+            $scope.$emit('load');
             userFactory.userResource().get().$promise.then(function (data) {
-                $log.log(data);
                 vm.users = data.value;
+                vm.loaded = true;
+                $scope.$emit('unload');
             });
         }
     }

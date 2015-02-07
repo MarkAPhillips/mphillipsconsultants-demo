@@ -61,6 +61,7 @@
     <Content Include="src\app.js" />
     <Content Include="src\app-run.js" />
     <Content Include="src\app\common\commonmodule.js" />
+    <Content Include="src\app\common\directives\loadingicondirective.js" />
     <Content Include="src\app\common\directives\templatedirectives.js" />
     <Content Include="src\app\common\views\footer.tmpl.html" />
     <Content Include="src\app\common\views\home.html" />
@@ -68,9 +69,13 @@
     <Content Include="src\app\users\services\userfactory.js" />
     <Content Include="src\app\users\views\users.html" />
     <Content Include="src\app\common\views\header.tmpl.html" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="src\assets\images\ajax-loader.gif" />
     <Content Include="src\index.html" />
     <Content Include="src\app\users\usermodule.js" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff" />
     <None Include="src\less\theme.less" />
     <Content Include="vendor\angular-resource\angular-resource.js" />
     <Content Include="vendor\angular-resource\angular-resource.min.js" />
