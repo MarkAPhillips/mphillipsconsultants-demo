@@ -63,10 +63,13 @@
     <Content Include="src\app\common\commonmodule.js" />
     <Content Include="src\app\common\directives\loadingicondirective.js" />
     <Content Include="src\app\common\directives\templatedirectives.js" />
+    <Content Include="src\app\common\services\flashfactory.js" />
     <Content Include="src\app\common\views\footer.tmpl.html" />
     <Content Include="src\app\common\views\home.html" />
+    <Content Include="src\app\users\controllers\formcontroller.js" />
     <Content Include="src\app\users\controllers\usercontroller.js" />
     <Content Include="src\app\users\services\userfactory.js" />
+    <Content Include="src\app\users\views\form.html" />
     <Content Include="src\app\users\views\users.html" />
     <Content Include="src\app\common\views\header.tmpl.html" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />

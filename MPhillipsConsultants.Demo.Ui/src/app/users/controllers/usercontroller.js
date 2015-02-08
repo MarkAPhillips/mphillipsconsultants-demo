@@ -5,12 +5,14 @@
         .module('MPhillipsConsultants.Demo.App.User')
         .controller('userController', userController);
 
-    userController.$inject = ['$scope', '$log', 'userFactory'];
+    userController.$inject = ['$scope', '$log', 'userFactory','flashFactory'];
 
-    function userController($scope, $log, userFactory) {
+    function userController($scope, $log, userFactory, flashFactory) {
         /* jshint validthis:true */
         var vm = this;
         vm.loaded = false;
+        vm.flash = flashFactory;
+
         activate();
 
         function activate() {

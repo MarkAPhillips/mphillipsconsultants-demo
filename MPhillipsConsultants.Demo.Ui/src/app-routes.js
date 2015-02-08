@@ -11,6 +11,11 @@
                 controller: 'userController',
                 controllerAs: 'user'
             }).
+             when('/users/manage', {
+                 templateUrl: '/src/app/users/views/form.html',
+                 controller: 'formController',
+                 controllerAs: 'form'
+             }).
             when('/', {
                  templateUrl: '/src/app/common/views/home.html'
              }).
