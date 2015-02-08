@@ -63,7 +63,6 @@
     <Content Include="src\app\common\commonmodule.js" />
     <Content Include="src\app\common\directives\loadingicondirective.js" />
     <Content Include="src\app\common\directives\templatedirectives.js" />
-    <Content Include="src\app\common\services\flashfactory.js" />
     <Content Include="src\app\common\views\footer.tmpl.html" />
     <Content Include="src\app\common\views\home.html" />
     <Content Include="src\app\users\controllers\formcontroller.js" />
@@ -80,6 +79,10 @@
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff" />
     <None Include="src\less\theme.less" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap.min.js" />
     <Content Include="vendor\angular-resource\angular-resource.js" />
     <Content Include="vendor\angular-resource\angular-resource.min.js" />
     <Content Include="vendor\angular-route\angular-route.js" />
@@ -181,6 +184,8 @@
     <Content Include="vendor\angular-route\bower.json" />
     <Content Include="vendor\angular-route\package.json" />
     <Content Include="vendor\angular-route\README.md" />
+    <Content Include="vendor\angular-bootstrap\.bower.json" />
+    <Content Include="vendor\angular-bootstrap\bower.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,6 +194,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\app\common\services\" />
     <Folder Include="src\app\common\tests\" />
     <Folder Include="src\app\users\directives\" />
     <Folder Include="src\app\users\tests\" />

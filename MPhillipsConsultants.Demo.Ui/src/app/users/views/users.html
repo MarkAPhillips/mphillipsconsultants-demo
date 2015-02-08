@@ -3,10 +3,7 @@
         <div class="col-md-10">
             <h1>Manage Users</h1>
             <div mp-loading-icon></div>
-            <!-- Flash message - move into directive -->
-            <div class="alert" ng-if="user.flash">
-                <p>{{user.flash.getMessage()}}</p>
-            </div>
+            <div class="alert alert-success" ng-show="$root.message"><span class="glyphicon glyphicon-ok"></span>&nbsp;{{$root.message}}</div>
             <div class="input-group col-md-6" ng-if="user.loaded">
                 <input type="text" class="search-query form-control" placeholder="Search" />
                 <span class="input-group-btn">
@@ -34,6 +31,7 @@
                             <th>Email</th>
                             <th>Country</th>
                             <th>IP Address</th>
+                            <th colspan="2"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,6 +41,8 @@
                             <td>{{item.Email}}</td>
                             <td>{{item.Country}}</td>
                             <td>{{item.IpAddress}}</td>
+                            <td><a ng-href="/users/manage/{{item.Id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                            <td><a href="#" ng-click="user.delete(item.Id)"><span class="glyphicon glyphicon-trash"></span></a></td>
                         </tr>
                     </tbody>
                 </table>

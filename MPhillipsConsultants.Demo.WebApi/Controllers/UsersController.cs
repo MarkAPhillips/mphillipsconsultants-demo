@@ -31,7 +31,7 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
             return SingleResult.Create(result);
         }
 
-        public async Task<IHttpActionResult> Post(Model.User user)
+        public async Task<IHttpActionResult> Post(User user)
         {
             if (!ModelState.IsValid)
             {
