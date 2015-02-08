@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.OData;
+using System.Web.OData.Query;
 using MPhillipsConsultants.Demo.Model;
 using MPhillipsConsultants.Demo.Services;
 
@@ -17,7 +18,7 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
             _userService = userService;
         }
 
-        [EnableQuery(PageSize = 20)]
+        [EnableQuery(PageSize = 15, AllowedQueryOptions= AllowedQueryOptions.Count)]
         public  IEnumerable<User> Get()
         {
             return  _userService.Get();

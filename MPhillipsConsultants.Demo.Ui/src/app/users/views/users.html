@@ -11,8 +11,18 @@
                     </button>
                 </span>
             </div>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-10">
+            <button type="button" class="btn btn-success" ng-if="user.loaded">Add User</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
             <div class="table-responsive">
-                <table class="table table-striped" ng-if="user.loaded">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>First Name</th>
