@@ -9,5 +9,6 @@ namespace MPhillipsConsultants.Demo.Services
         IEnumerable<User> Get();
         IEnumerable<User> GetByKey(int id);
         Task<User> Insert(User user);
+        Task Delete(User user);
     }
 }

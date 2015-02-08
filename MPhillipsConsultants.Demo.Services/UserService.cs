@@ -22,6 +22,12 @@ namespace MPhillipsConsultants.Demo.Services
             return user;
         }
 
+        public async Task Delete(User user)
+        {
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+        }
+
         public IEnumerable<User> Get()
         {
             return _context.Users;

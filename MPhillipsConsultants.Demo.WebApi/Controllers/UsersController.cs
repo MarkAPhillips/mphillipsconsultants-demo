@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.OData;
@@ -39,6 +40,18 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
             }
             await _userService.Insert(user);
             return Created(user);
+        }
+
+        public async Task<IHttpActionResult> Delete([FromODataUri] int key)
+        {
+            var user = _userService.GetByKey(key).FirstOrDefault();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+            await _userService.Delete(user);
+            return StatusCode(HttpStatusCode.NoContent);
         }
     }
 }
