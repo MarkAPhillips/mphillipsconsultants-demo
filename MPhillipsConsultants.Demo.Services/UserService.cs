@@ -14,6 +14,7 @@ namespace MPhillipsConsultants.Demo.Services
         public UserService(DemoContext context)
         {
             _context = context;
+            _context.Configuration.LazyLoadingEnabled = false;
         }
 
         public async Task<User> Insert(User user)
@@ -32,12 +33,13 @@ namespace MPhillipsConsultants.Demo.Services
 
         public async Task<IEnumerable<User>> Get()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                .AsNoTracking().ToListAsync();
         }
 
-        public IEnumerable<User> GetByKey(int id)
+        public async Task<User> GetByKey(int id)
         {
-            return _context.Users.Where(x => x.Id == id);
+            return await _context.Users.FindAsync(id);
         }
     }
 }

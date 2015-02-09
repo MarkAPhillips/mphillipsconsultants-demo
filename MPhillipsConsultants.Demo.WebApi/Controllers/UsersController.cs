@@ -26,10 +26,9 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
         }
 
         [EnableQuery]
-        public SingleResult<User> Get([FromODataUri] int key)
+        public async Task<User> Get([FromODataUri] int key)
         {
-            IQueryable<User> result = _userService.GetByKey(key).AsQueryable();
-            return SingleResult.Create(result);
+            return await _userService.GetByKey(key);
         }
 
         public async Task<IHttpActionResult> Post(User user)
@@ -44,8 +43,7 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
 
         public async Task<IHttpActionResult> Delete([FromODataUri] int key)
         {
-            var user = _userService.GetByKey(key).FirstOrDefault();
-
+            var user = await _userService.GetByKey(key);
             if (user == null)
             {
                 return NotFound();

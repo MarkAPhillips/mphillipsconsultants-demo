@@ -63,6 +63,7 @@
     <Content Include="src\app\common\commonmodule.js" />
     <Content Include="src\app\common\directives\loadingicondirective.js" />
     <Content Include="src\app\common\directives\templatedirectives.js" />
+    <Content Include="src\app\common\controllers\modalcontroller.js" />
     <Content Include="src\app\common\services\underscorefactory.js" />
     <Content Include="src\app\common\views\footer.tmpl.html" />
     <Content Include="src\app\common\views\home.html" />
