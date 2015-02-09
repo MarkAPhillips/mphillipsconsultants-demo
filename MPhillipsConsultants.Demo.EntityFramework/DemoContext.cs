@@ -12,7 +12,7 @@ namespace MPhillipsConsultants.Demo.EntityFramework
             Database.SetInitializer(new DemoContextInitializer());
         }
 
-        public IDbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

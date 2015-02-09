@@ -20,9 +20,9 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
         }
 
         [EnableQuery(PageSize = 15, AllowedQueryOptions= AllowedQueryOptions.Count)]
-        public  IEnumerable<User> Get()
+        public  async Task<IEnumerable<User>> Get()
         {
-            return  _userService.Get();
+            return  await _userService.Get();
         }
 
         [EnableQuery]

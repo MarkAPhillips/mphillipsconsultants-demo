@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using MPhillipsConsultants.Demo.EntityFramework;
@@ -22,15 +23,16 @@ namespace MPhillipsConsultants.Demo.Services
             return user;
         }
 
-        public async Task Delete(User user)
+        public async Task<User> Delete(User user)
         {
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
+            return user;
         }
 
-        public IEnumerable<User> Get()
+        public async Task<IEnumerable<User>> Get()
         {
-            return _context.Users;
+            return await _context.Users.ToListAsync();
         }
 
         public IEnumerable<User> GetByKey(int id)
