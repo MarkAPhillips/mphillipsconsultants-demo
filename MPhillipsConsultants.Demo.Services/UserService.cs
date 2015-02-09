@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,8 +18,17 @@ namespace MPhillipsConsultants.Demo.Services
             _context.Configuration.LazyLoadingEnabled = false;
         }
 
+        public async Task<User> Update(User user)
+        {
+            user.LastModified = DateTime.UtcNow;
+            _context.Entry(user).State = EntityState.Modified; 
+            await _context.SaveChangesAsync();
+            return user;
+        }
+
         public async Task<User> Insert(User user)
         {
+            user.LastModified = DateTime.UtcNow;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;

@@ -27,6 +27,12 @@ namespace MPhillipsConsultants.Demo.EntityFramework.Configurations
             Property(p => p.IpAddress)
                 .HasMaxLength(50)
                 .IsOptional();
+
+            Property(p => p.RowVersion)
+                .IsRowVersion();
+
+            Property(p => p.LastModified)
+                .IsRequired();
         }
     }
 }
