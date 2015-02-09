@@ -5,16 +5,21 @@
         .module('MPhillipsConsultants.Demo.App.User')
         .controller('userController', userController);
 
-    userController.$inject = ['$scope', '$log', 'userFactory'];
+    userController.$inject = ['$scope', '$log', '$rootScope','userFactory','_'];
 
-    function userController($scope, $log, userFactory) {
+    function userController($scope, $log, $rootScope, userFactory, _) {
         /* jshint validthis:true */
         var vm = this;
         vm.loaded = false;
 
         /* Delete user from view */
-        vm.delete = function(index) {
-            alert('Delete ' + index);
+        vm.delete = function (index) {
+            if (confirm('Click OK to delete the user')) {
+                userFactory.users().delete({ key: index }).$promise.then(function(user) {
+                    vm.users = _.reject(vm.users, function(item) { return item.Id === index; });
+                    $rootScope.message = 'User ' + user.FirstName + ' ' + user.LastName + ' successfully deleted.';
+                });
+            }
         };
         
         activate();

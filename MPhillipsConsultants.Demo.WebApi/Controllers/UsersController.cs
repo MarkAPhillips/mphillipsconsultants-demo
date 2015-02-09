@@ -51,7 +51,7 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
                 return NotFound();
             }
             await _userService.Delete(user);
-            return StatusCode(HttpStatusCode.NoContent);
+            return Ok(user);
         }
     }
 }

@@ -63,6 +63,7 @@
     <Content Include="src\app\common\commonmodule.js" />
     <Content Include="src\app\common\directives\loadingicondirective.js" />
     <Content Include="src\app\common\directives\templatedirectives.js" />
+    <Content Include="src\app\common\services\underscorefactory.js" />
     <Content Include="src\app\common\views\footer.tmpl.html" />
     <Content Include="src\app\common\views\home.html" />
     <Content Include="src\app\users\controllers\formcontroller.js" />
@@ -87,21 +88,17 @@
     <Content Include="vendor\angular-resource\angular-resource.min.js" />
     <Content Include="vendor\angular-route\angular-route.js" />
     <Content Include="vendor\angular-route\angular-route.min.js" />
-    <Content Include="vendor\angularjs\angular-csp.css" />
-    <Content Include="vendor\angularjs\angular.js" />
-    <Content Include="vendor\angularjs\angular.min.js" />
+    <Content Include="vendor\angular\angular-csp.css" />
+    <Content Include="vendor\angular\angular.js" />
+    <Content Include="vendor\angular\angular.min.js" />
+    <Content Include="vendor\underscore\underscore-min.js" />
+    <Content Include="vendor\underscore\underscore.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="vendor\angularjs\.bower.json" />
-    <Content Include="vendor\angularjs\angular.min.js.gzip" />
-    <Content Include="vendor\angularjs\angular.min.js.map" />
-    <Content Include="vendor\angularjs\bower.json" />
-    <Content Include="vendor\angularjs\package.json" />
-    <Content Include="vendor\angularjs\README.md" />
     <Content Include="src\less\bootstrap\.csscomb.json" />
     <Content Include="src\less\bootstrap\.csslintrc" />
     <Content Include="src\less\bootstrap\alerts.less" />
@@ -186,6 +183,21 @@
     <Content Include="vendor\angular-route\README.md" />
     <Content Include="vendor\angular-bootstrap\.bower.json" />
     <Content Include="vendor\angular-bootstrap\bower.json" />
+    <Content Include="vendor\underscore\.bower.json" />
+    <Content Include="vendor\underscore\.eslintrc" />
+    <Content Include="vendor\underscore\.gitignore" />
+    <Content Include="vendor\underscore\bower.json" />
+    <Content Include="vendor\underscore\component.json" />
+    <Content Include="vendor\underscore\LICENSE" />
+    <Content Include="vendor\underscore\package.json" />
+    <Content Include="vendor\underscore\README.md" />
+    <Content Include="vendor\underscore\underscore-min.map" />
+    <Content Include="vendor\angular\.bower.json" />
+    <Content Include="vendor\angular\angular.min.js.gzip" />
+    <Content Include="vendor\angular\angular.min.js.map" />
+    <Content Include="vendor\angular\bower.json" />
+    <Content Include="vendor\angular\package.json" />
+    <Content Include="vendor\angular\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -194,7 +206,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\app\common\services\" />
     <Folder Include="src\app\common\tests\" />
     <Folder Include="src\app\users\directives\" />
     <Folder Include="src\app\users\tests\" />
