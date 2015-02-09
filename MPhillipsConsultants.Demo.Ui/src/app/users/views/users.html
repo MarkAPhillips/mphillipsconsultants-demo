@@ -5,9 +5,9 @@
             <div mp-loading-icon></div>
             <div class="alert alert-success" ng-show="$root.message"><span class="glyphicon glyphicon-ok"></span>&nbsp;{{$root.message}}</div>
             <div class="input-group col-md-6" ng-if="user.loaded">
-                <input type="text" class="search-query form-control" placeholder="Search" />
+                <input type="text" class="search-query form-control" ng-model="user.searchText" placeholder="Search" />
                 <span class="input-group-btn">
-                    <button class="btn" type="button" aria-label="Search">
+                    <button class="btn" type="button" aria-label="Search" ng-click="user.search()">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     </button>
                 </span>

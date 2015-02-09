@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 using MPhillipsConsultants.Demo.EntityFramework;
 using MPhillipsConsultants.Demo.Model;
@@ -41,10 +40,9 @@ namespace MPhillipsConsultants.Demo.Services
             return user;
         }
 
-        public async Task<IEnumerable<User>> Get()
+        public  IEnumerable<User> Get()
         {
-            return await _context.Users
-                .AsNoTracking().ToListAsync();
+            return _context.Users.AsNoTracking();
         }
 
         public async Task<User> GetByKey(int id)

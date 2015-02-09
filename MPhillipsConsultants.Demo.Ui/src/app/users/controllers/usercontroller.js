@@ -11,6 +11,7 @@
         /* jshint validthis:true */
         var vm = this;
         vm.loaded = false;
+        vm.search = search;
 
         /* Delete user from view */
         vm.delete = function (index) {
@@ -21,10 +22,11 @@
                 });
             }
         };
-        
-        activate();
-        
-        function activate() {
+
+        loadUsers();
+         
+        /* Load user data */
+        function loadUsers() {
             $scope.$emit('load');
             userFactory.users().get().$promise.then(function(data) {
                 vm.users = data.value;
@@ -33,6 +35,23 @@
                 $log.error(error);
             }).finally(function() {
                 $scope.$emit('unload');
+            });
+        }
+        
+        /* Search users */
+        function search() {
+            $rootScope.message = null;
+            vm.loaded = false;
+            var searchText = vm.searchText;
+
+            var filterCommand = 'contains(FirstName, \'' + searchText + '\') or ' +
+                'contains(LastName, \'' + searchText + '\')';
+
+            userFactory.users().search({ cmd: filterCommand }).$promise.then(function (data) {
+                vm.users = data.value;
+                vm.loaded = true;
+            }, function (error) {
+                $log.error(error);
             });
         }
     }

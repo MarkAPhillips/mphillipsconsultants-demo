@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function () {
     'use strict';
 
     angular
@@ -16,11 +16,12 @@
 
         function users() {
             var oDataUrl = apiUri + '/users';
-            
+
             ///* Web API Resources on Users using oData conventions */
             var actions = {
                 'get': { method: "GET", params: { "$count": true }, url: oDataUrl },
-                'save': { method: "POST", url: oDataUrl},
+                'search': { method: "GET", params: { "cmd": "@filterCommand" }, url: oDataUrl + '?$filter=:cmd' },
+                'save': { method: "POST", url: oDataUrl },
                 'update': { method: 'PUT', params: { key: "@key" }, url: oDataUrl + "(:key)" },
                 'delete': { method: 'DELETE', params: { key: "@key" }, url: oDataUrl + "(:key)" }
             };

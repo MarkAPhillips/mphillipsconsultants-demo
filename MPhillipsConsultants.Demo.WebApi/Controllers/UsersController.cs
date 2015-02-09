@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.OData;
@@ -19,10 +18,10 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
             _userService = userService;
         }
 
-        [EnableQuery(PageSize = 15, AllowedQueryOptions= AllowedQueryOptions.Count)]
-        public  async Task<IEnumerable<User>> Get()
+        [EnableQuery(PageSize = 15, AllowedQueryOptions= AllowedQueryOptions.All)]
+        public IQueryable<User> Get()
         {
-            return  await _userService.Get();
+            return  _userService.Get().AsQueryable();
         }
 
         [EnableQuery]
