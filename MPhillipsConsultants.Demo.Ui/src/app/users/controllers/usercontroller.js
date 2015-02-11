@@ -12,7 +12,7 @@
         var vm = this;
         vm.loaded = false;
         vm.search = search;
-
+       
         /* Delete user from view */
         vm.delete = function (index) {
             if (confirm('Click OK to delete the user')) {

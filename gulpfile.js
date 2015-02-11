@@ -1,4 +1,5 @@
-(function() {
+(function () {
+    'use strict';
     var gulp = require('gulp'),
         less = require('gulp-less'),
         jshint = require('gulp-jshint'),

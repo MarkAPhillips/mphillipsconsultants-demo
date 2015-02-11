@@ -38,7 +38,7 @@
                         <tr ng-repeat="item in user.users">
                             <td>{{item.FirstName}}</td>
                             <td>{{item.LastName}}</td>
-                            <td>{{item.Email}}</td>
+                            <td><a ng-href="mailto:{{item.Email}}">{{item.Email}}</a></td>
                             <td>{{item.Country}}</td>
                             <td>{{item.IpAddress}}</td>
                             <td><a ng-href="/users/manage/{{item.Id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
