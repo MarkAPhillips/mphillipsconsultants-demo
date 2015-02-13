@@ -1,5 +1,4 @@
-﻿using MPhillipsConsultants.Demo.EntityFramework;
-using Ninject.Modules;
+﻿using Ninject.Modules;
 
 namespace MPhillipsConsultants.Demo.Services.Dependency
 {
@@ -8,6 +7,7 @@ namespace MPhillipsConsultants.Demo.Services.Dependency
         public override void Load()
         {
             Bind<IUserService>().To<UserService>();
+            Bind<IUserBuilder>().To<UserBuilder>();
         }
     }
 }

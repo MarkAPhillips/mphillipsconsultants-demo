@@ -6,9 +6,10 @@ namespace MPhillipsConsultants.Demo.Services
 {
     public interface IUserService
     {
-        IEnumerable<User> Get();
-        Task<User> GetByKey(int id);
-        Task<User> Insert(User user);
-        Task<User> Delete(User user);
+        IEnumerable<User> GetAsync();
+        Task<User> GetByKeyAsync(int id);
+        Task<User> InsertAsync(User user);
+        Task<User> DeleteAsync(User user);
+        Task<User> UpdateAsync(User user);
     }
 }

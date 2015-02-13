@@ -69,6 +69,7 @@
     <Content Include="src\app\users\controllers\formcontroller.js" />
     <Content Include="src\app\users\controllers\usercontroller.js" />
     <Content Include="src\app\users\services\userfactory.js" />
+    <Content Include="src\app\users\user-routes.js" />
     <Content Include="src\app\users\views\form.html" />
     <Content Include="src\app\users\views\users.html" />
     <Content Include="src\app\common\views\header.tmpl.html" />
@@ -88,6 +89,9 @@
     <Content Include="vendor\angular-resource\angular-resource.min.js" />
     <Content Include="vendor\angular-route\angular-route.js" />
     <Content Include="vendor\angular-route\angular-route.min.js" />
+    <Content Include="vendor\angular-rx\dist\rx.angular.js" />
+    <Content Include="vendor\angular-rx\Gruntfile.js" />
+    <Content Include="vendor\angular-rx\index.js" />
     <Content Include="vendor\angular\angular-csp.css" />
     <Content Include="vendor\angular\angular.js" />
     <Content Include="vendor\angular\angular.min.js" />
@@ -198,6 +202,10 @@
     <Content Include="vendor\angular\bower.json" />
     <Content Include="vendor\angular\package.json" />
     <Content Include="vendor\angular\README.md" />
+    <Content Include="vendor\angular-rx\.bower.json" />
+    <Content Include="vendor\angular-rx\bower.json" />
+    <Content Include="vendor\angular-rx\dist\rx.angular.map" />
+    <Content Include="vendor\angular-rx\nuget\RxJS-Bridges-Angular\RxJS-Bridges-Angular.nuspec" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -211,6 +219,7 @@
     <Folder Include="src\app\users\tests\" />
     <Folder Include="src\assets\css\" />
     <Folder Include="tests\" />
+    <Folder Include="vendor\angular-rx\docs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
