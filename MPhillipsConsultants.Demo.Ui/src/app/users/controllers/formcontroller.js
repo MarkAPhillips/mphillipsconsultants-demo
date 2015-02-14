@@ -37,16 +37,18 @@
                 "Country": vm.Country,
                 "IpAddress" : vm.IpAddress
             };
+
+            var userMessage = 'User ' + user.FirstName + ' ' + user.LastName + ' successfully ';
             if (typeof id == 'undefined') {
                 userFactory.users().save(user).$promise.then(function() {
-                    $rootScope.message = 'User ' + user.FirstName + ' ' + user.LastName + ' successfully added.';
+                    $rootScope.message = userMessage + 'added.';
                     $location.path('/users');
                 }, function(error) {
                     $log.error(error);
                 });
             } else {
                 userFactory.users().update({key: id},user).$promise.then(function () {
-                    $rootScope.message = 'User ' + user.FirstName + ' ' + user.LastName + ' successfully updated.';
+                    $rootScope.message = userMessage + 'updated.';
                     $location.path('/users');
                 }, function (error) {
                     $log.error(error);
