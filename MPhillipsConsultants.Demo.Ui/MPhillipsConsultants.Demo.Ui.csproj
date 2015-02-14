@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0392664B-4EAC-46C9-B64C-C39CA4F4ADCC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPhillipsConsultants.Demo.Ui</RootNamespace>
+    <AssemblyName>MPhillipsConsultants.Demo.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app-routes.js" />
+    <Content Include="src\app.js" />
+    <Content Include="src\app-run.js" />
+    <Content Include="src\app\common\commonmodule.js" />
+    <Content Include="src\app\common\directives\loadingicondirective.js" />
+    <Content Include="src\app\common\directives\templatedirectives.js" />
+    <Content Include="src\app\common\services\underscorefactory.js" />
+    <Content Include="src\app\common\views\footer.tmpl.html" />
+    <Content Include="src\app\common\views\home.html" />
+    <Content Include="src\app\users\controllers\formcontroller.js" />
+    <Content Include="src\app\users\controllers\usercontroller.js" />
+    <Content Include="src\app\users\services\userfactory.js" />
+    <Content Include="src\app\users\user-routes.js" />
+    <Content Include="src\app\users\views\form.html" />
+    <Content Include="src\app\users\views\users.html" />
+    <Content Include="src\app\common\views\header.tmpl.html" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\assets\images\ajax-loader.gif" />
+    <Content Include="src\index.html" />
+    <Content Include="src\app\users\usermodule.js" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="src\less\theme.less" />
+    <Content Include="vendor\angular-animate\angular-animate.js" />
+    <Content Include="vendor\angular-animate\angular-animate.min.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="vendor\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="vendor\angular-resource\angular-resource.js" />
+    <Content Include="vendor\angular-resource\angular-resource.min.js" />
+    <Content Include="vendor\angular-route\angular-route.js" />
+    <Content Include="vendor\angular-route\angular-route.min.js" />
+    <Content Include="vendor\angular-rx\dist\rx.angular.js" />
+    <Content Include="vendor\angular-rx\Gruntfile.js" />
+    <Content Include="vendor\angular-rx\index.js" />
+    <Content Include="vendor\angular\angular-csp.css" />
+    <Content Include="vendor\angular\angular.js" />
+    <Content Include="vendor\angular\angular.min.js" />
+    <Content Include="vendor\greensock\changelog.txt" />
+    <Content Include="vendor\greensock\src\minified\easing\EasePack.min.js" />
+    <Content Include="vendor\greensock\src\minified\jquery.gsap.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\AttrPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\BezierPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\ColorPropsPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\CSSPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\CSSRulePlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\DirectionalRotationPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\EaselPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\EndArrayPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\KineticPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\RaphaelPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\RoundPropsPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\ScrollToPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\plugins\TextPlugin.min.js" />
+    <Content Include="vendor\greensock\src\minified\TimelineLite.min.js" />
+    <Content Include="vendor\greensock\src\minified\TimelineMax.min.js" />
+    <Content Include="vendor\greensock\src\minified\TweenLite.min.js" />
+    <Content Include="vendor\greensock\src\minified\TweenMax.min.js" />
+    <Content Include="vendor\greensock\src\minified\utils\Draggable.min.js" />
+    <Content Include="vendor\greensock\src\uncompressed\easing\EasePack.js" />
+    <Content Include="vendor\greensock\src\uncompressed\jquery.gsap.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\AttrPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\BezierPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\ColorPropsPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\CSSPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\CSSRulePlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\DirectionalRotationPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\EaselPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\EndArrayPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\KineticPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\RaphaelPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\RoundPropsPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\ScrollToPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\TEMPLATE_Plugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\plugins\TextPlugin.js" />
+    <Content Include="vendor\greensock\src\uncompressed\TimelineLite.js" />
+    <Content Include="vendor\greensock\src\uncompressed\TimelineMax.js" />
+    <Content Include="vendor\greensock\src\uncompressed\TweenLite.js" />
+    <Content Include="vendor\greensock\src\uncompressed\TweenMax.js" />
+    <Content Include="vendor\greensock\src\uncompressed\utils\Draggable.js" />
+    <Content Include="vendor\rxjs\dist\rx.aggregates.js" />
+    <Content Include="vendor\rxjs\dist\rx.aggregates.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.all.compat.js" />
+    <Content Include="vendor\rxjs\dist\rx.all.compat.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.all.js" />
+    <Content Include="vendor\rxjs\dist\rx.all.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.async.compat.js" />
+    <Content Include="vendor\rxjs\dist\rx.async.compat.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.async.js" />
+    <Content Include="vendor\rxjs\dist\rx.async.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.backpressure.js" />
+    <Content Include="vendor\rxjs\dist\rx.backpressure.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.binding.js" />
+    <Content Include="vendor\rxjs\dist\rx.binding.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.coincidence.js" />
+    <Content Include="vendor\rxjs\dist\rx.coincidence.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.compat.js" />
+    <Content Include="vendor\rxjs\dist\rx.compat.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.experimental.js" />
+    <Content Include="vendor\rxjs\dist\rx.experimental.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.joinpatterns.js" />
+    <Content Include="vendor\rxjs\dist\rx.joinpatterns.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.js" />
+    <Content Include="vendor\rxjs\dist\rx.lite.compat.js" />
+    <Content Include="vendor\rxjs\dist\rx.lite.compat.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.lite.extras.js" />
+    <Content Include="vendor\rxjs\dist\rx.lite.extras.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.lite.js" />
+    <Content Include="vendor\rxjs\dist\rx.lite.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.sorting.js" />
+    <Content Include="vendor\rxjs\dist\rx.sorting.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.testing.js" />
+    <Content Include="vendor\rxjs\dist\rx.testing.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.time.js" />
+    <Content Include="vendor\rxjs\dist\rx.time.min.js" />
+    <Content Include="vendor\rxjs\dist\rx.virtualtime.js" />
+    <Content Include="vendor\rxjs\dist\rx.virtualtime.min.js" />
+    <Content Include="vendor\rxjs\Gruntfile.js" />
+    <Content Include="vendor\rxjs\index.js" />
+    <Content Include="vendor\rxjs\logos\logo.png" />
+    <Content Include="vendor\rxjs\ts\rx-lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.aggregates.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.all.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.async-lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.async-tests.ts" />
+    <Content Include="vendor\rxjs\ts\rx.async.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.backpressure-lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.backpressure-tests.ts" />
+    <Content Include="vendor\rxjs\ts\rx.backpressure.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.binding-lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.binding.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.coincidence-lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.coincidence.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.experimental.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.joinpatterns.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.testing.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.time-lite.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.time.d.ts" />
+    <Content Include="vendor\rxjs\ts\rx.virtualtime.d.ts" />
+    <Content Include="vendor\underscore\underscore-min.js" />
+    <Content Include="vendor\underscore\underscore.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\less\bootstrap\.csscomb.json" />
+    <Content Include="src\less\bootstrap\.csslintrc" />
+    <Content Include="src\less\bootstrap\alerts.less" />
+    <Content Include="src\less\bootstrap\badges.less" />
+    <Content Include="src\less\bootstrap\bootstrap.less" />
+    <Content Include="src\less\bootstrap\breadcrumbs.less" />
+    <Content Include="src\less\bootstrap\button-groups.less" />
+    <Content Include="src\less\bootstrap\buttons.less" />
+    <Content Include="src\less\bootstrap\carousel.less" />
+    <Content Include="src\less\bootstrap\close.less" />
+    <Content Include="src\less\bootstrap\code.less" />
+    <Content Include="src\less\bootstrap\component-animations.less" />
+    <Content Include="src\less\bootstrap\dropdowns.less" />
+    <Content Include="src\less\bootstrap\forms.less" />
+    <Content Include="src\less\bootstrap\glyphicons.less" />
+    <Content Include="src\less\bootstrap\grid.less" />
+    <Content Include="src\less\bootstrap\input-groups.less" />
+    <Content Include="src\less\bootstrap\jumbotron.less" />
+    <Content Include="src\less\bootstrap\labels.less" />
+    <Content Include="src\less\bootstrap\list-group.less" />
+    <Content Include="src\less\bootstrap\media.less" />
+    <Content Include="src\less\bootstrap\mixins.less" />
+    <Content Include="src\less\bootstrap\modals.less" />
+    <Content Include="src\less\bootstrap\navbar.less" />
+    <Content Include="src\less\bootstrap\navs.less" />
+    <Content Include="src\less\bootstrap\normalize.less" />
+    <Content Include="src\less\bootstrap\pager.less" />
+    <Content Include="src\less\bootstrap\pagination.less" />
+    <Content Include="src\less\bootstrap\panels.less" />
+    <Content Include="src\less\bootstrap\popovers.less" />
+    <Content Include="src\less\bootstrap\print.less" />
+    <Content Include="src\less\bootstrap\progress-bars.less" />
+    <Content Include="src\less\bootstrap\responsive-embed.less" />
+    <Content Include="src\less\bootstrap\responsive-utilities.less" />
+    <Content Include="src\less\bootstrap\scaffolding.less" />
+    <Content Include="src\less\bootstrap\tables.less" />
+    <Content Include="src\less\bootstrap\theme.less" />
+    <Content Include="src\less\bootstrap\thumbnails.less" />
+    <Content Include="src\less\bootstrap\tooltip.less" />
+    <Content Include="src\less\bootstrap\type.less" />
+    <Content Include="src\less\bootstrap\utilities.less" />
+    <Content Include="src\less\bootstrap\variables.less" />
+    <Content Include="src\less\bootstrap\wells.less" />
+    <Content Include="src\less\bootstrap\mixins\alerts.less" />
+    <Content Include="src\less\bootstrap\mixins\background-variant.less" />
+    <Content Include="src\less\bootstrap\mixins\border-radius.less" />
+    <Content Include="src\less\bootstrap\mixins\buttons.less" />
+    <Content Include="src\less\bootstrap\mixins\center-block.less" />
+    <Content Include="src\less\bootstrap\mixins\clearfix.less" />
+    <Content Include="src\less\bootstrap\mixins\forms.less" />
+    <Content Include="src\less\bootstrap\mixins\gradients.less" />
+    <Content Include="src\less\bootstrap\mixins\grid-framework.less" />
+    <Content Include="src\less\bootstrap\mixins\grid.less" />
+    <Content Include="src\less\bootstrap\mixins\hide-text.less" />
+    <Content Include="src\less\bootstrap\mixins\image.less" />
+    <Content Include="src\less\bootstrap\mixins\labels.less" />
+    <Content Include="src\less\bootstrap\mixins\list-group.less" />
+    <Content Include="src\less\bootstrap\mixins\nav-divider.less" />
+    <Content Include="src\less\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="src\less\bootstrap\mixins\opacity.less" />
+    <Content Include="src\less\bootstrap\mixins\pagination.less" />
+    <Content Include="src\less\bootstrap\mixins\panels.less" />
+    <Content Include="src\less\bootstrap\mixins\progress-bar.less" />
+    <Content Include="src\less\bootstrap\mixins\reset-filter.less" />
+    <Content Include="src\less\bootstrap\mixins\resize.less" />
+    <Content Include="src\less\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="src\less\bootstrap\mixins\size.less" />
+    <Content Include="src\less\bootstrap\mixins\tab-focus.less" />
+    <Content Include="src\less\bootstrap\mixins\table-row.less" />
+    <Content Include="src\less\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="src\less\bootstrap\mixins\text-overflow.less" />
+    <Content Include="src\less\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="vendor\angular-resource\.bower.json" />
+    <Content Include="vendor\angular-resource\angular-resource.min.js.map" />
+    <Content Include="vendor\angular-resource\bower.json" />
+    <Content Include="vendor\angular-resource\package.json" />
+    <Content Include="vendor\angular-resource\README.md" />
+    <Content Include="vendor\angular-route\.bower.json" />
+    <Content Include="vendor\angular-route\angular-route.min.js.map" />
+    <Content Include="vendor\angular-route\bower.json" />
+    <Content Include="vendor\angular-route\package.json" />
+    <Content Include="vendor\angular-route\README.md" />
+    <Content Include="vendor\angular-bootstrap\.bower.json" />
+    <Content Include="vendor\angular-bootstrap\bower.json" />
+    <Content Include="vendor\underscore\.bower.json" />
+    <Content Include="vendor\underscore\.eslintrc" />
+    <Content Include="vendor\underscore\.gitignore" />
+    <Content Include="vendor\underscore\bower.json" />
+    <Content Include="vendor\underscore\component.json" />
+    <Content Include="vendor\underscore\LICENSE" />
+    <Content Include="vendor\underscore\package.json" />
+    <Content Include="vendor\underscore\README.md" />
+    <Content Include="vendor\underscore\underscore-min.map" />
+    <Content Include="vendor\angular\.bower.json" />
+    <Content Include="vendor\angular\angular.min.js.gzip" />
+    <Content Include="vendor\angular\angular.min.js.map" />
+    <Content Include="vendor\angular\bower.json" />
+    <Content Include="vendor\angular\package.json" />
+    <Content Include="vendor\angular\README.md" />
+    <Content Include="vendor\angular-rx\.bower.json" />
+    <Content Include="vendor\angular-rx\bower.json" />
+    <Content Include="vendor\angular-rx\dist\rx.angular.map" />
+    <Content Include="vendor\angular-rx\nuget\RxJS-Bridges-Angular\RxJS-Bridges-Angular.nuspec" />
+    <Content Include="vendor\rxjs\.bower.json" />
+    <Content Include="vendor\rxjs\bower.json" />
+    <Content Include="vendor\rxjs\component.json" />
+    <Content Include="vendor\rxjs\dist\rx.aggregates.map" />
+    <Content Include="vendor\rxjs\dist\rx.all.compat.map" />
+    <Content Include="vendor\rxjs\dist\rx.all.map" />
+    <Content Include="vendor\rxjs\dist\rx.async.compat.map" />
+    <Content Include="vendor\rxjs\dist\rx.async.map" />
+    <Content Include="vendor\rxjs\dist\rx.backpressure.map" />
+    <Content Include="vendor\rxjs\dist\rx.binding.map" />
+    <Content Include="vendor\rxjs\dist\rx.coincidence.map" />
+    <Content Include="vendor\rxjs\dist\rx.compat.map" />
+    <Content Include="vendor\rxjs\dist\rx.experimental.map" />
+    <Content Include="vendor\rxjs\dist\rx.joinpatterns.map" />
+    <Content Include="vendor\rxjs\dist\rx.lite.compat.map" />
+    <Content Include="vendor\rxjs\dist\rx.lite.extras.map" />
+    <Content Include="vendor\rxjs\dist\rx.lite.map" />
+    <Content Include="vendor\rxjs\dist\rx.map" />
+    <Content Include="vendor\rxjs\dist\rx.sorting.map" />
+    <Content Include="vendor\rxjs\dist\rx.testing.map" />
+    <Content Include="vendor\rxjs\dist\rx.time.map" />
+    <Content Include="vendor\rxjs\dist\rx.virtualtime.map" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Aggregates\RxJS-Aggregates.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-All\RxJS-All.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Async\RxJS-Async.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-BackPressure\RxJS-BackPressure.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Binding\RxJS-Binding.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Coincidence\RxJS-Coincidence.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Complete\RxJS-Complete.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Experimental\RxJS-Experimental.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-JoinPatterns\RxJS-JoinPatterns.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Lite\RxJS-Lite.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Main\RxJS-Main.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Testing\RxJS-Testing.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-Time\RxJS-Time.nuspec" />
+    <Content Include="vendor\rxjs\nuget\RxJS-VirtualTime\RxJS-VirtualTime.nuspec" />
+    <Content Include="vendor\rxjs\travis.sh" />
+    <Content Include="vendor\angular-animate\.bower.json" />
+    <Content Include="vendor\angular-animate\angular-animate.min.js.map" />
+    <Content Include="vendor\angular-animate\bower.json" />
+    <Content Include="vendor\angular-animate\package.json" />
+    <Content Include="vendor\angular-animate\README.md" />
+    <Content Include="vendor\greensock\.bower.json" />
+    <Content Include="vendor\greensock\.gitignore" />
+    <Content Include="vendor\greensock\bower.json" />
+    <Content Include="vendor\greensock\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\common\tests\" />
+    <Folder Include="src\app\users\directives\" />
+    <Folder Include="src\app\users\tests\" />
+    <Folder Include="src\assets\css\" />
+    <Folder Include="tests\" />
+    <Folder Include="vendor\angular-rx\docs\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52827</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:70/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug call "$(SolutionDir)gulp-local-build.bat"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

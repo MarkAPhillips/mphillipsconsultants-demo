@@ -1,0 +1,52 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>Manage Users</h1>
+            <div mp-loading-icon></div>
+            <div class="alert alert-success" ng-show="$root.message"><span class="glyphicon glyphicon-ok"></span>&nbsp;{{$root.message}}</div>
+            <div class="input-group col-md-6" ng-if="user.loaded">
+                <input type="text" class="search-query form-control" ng-model="user.searchText" placeholder="Search" />
+                <span class="input-group-btn">
+                    <button class="btn" type="button" aria-label="Search" ng-click="user.search()">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-10">
+            <a class="btn btn-primary" role="button" ng-if="user.loaded" href="/users/manage">Add User</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="table-responsive" ng-if="user.loaded">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>IP Address</th>
+                            <th colspan="2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in user.users">
+                            <td>{{item.FirstName}}</td>
+                            <td>{{item.LastName}}</td>
+                            <td><a ng-href="mailto:{{item.Email}}">{{item.Email}}</a></td>
+                            <td>{{item.Country}}</td>
+                            <td>{{item.IpAddress}}</td>
+                            <td><a ng-href="/users/manage/{{item.Id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                            <td><a href="#" ng-click="user.delete(item.Id)"><span class="glyphicon glyphicon-trash"></span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
