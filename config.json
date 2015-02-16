@@ -1,6 +1,10 @@
 {
   "DEBUG": { 
 		"apiUri": "http://localhost:90" ,
-		"assetPath":"/src/assets/"
+		"assetPath":"/src/assets/",
+		"paging": {
+			"maxSize": 5,
+			"defaultPageSize": 10
+		}
   }
 }

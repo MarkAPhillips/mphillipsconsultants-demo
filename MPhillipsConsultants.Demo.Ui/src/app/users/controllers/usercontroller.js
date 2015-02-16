@@ -5,16 +5,16 @@
         .module('MPhillipsConsultants.Demo.App.User')
         .controller('userController', userController);
 
-    userController.$inject = ['$scope', '$log', '$rootScope', 'userFactory', '_'];
+    userController.$inject = ['$scope', '$log', '$rootScope', 'userFactory', '_', 'paging'];
 
-    function userController($scope, $log, $rootScope, userFactory, _) {
+    function userController($scope, $log, $rootScope, userFactory, _, paging) {
         /* jshint validthis:true */
         var vm = this;
         vm.loaded = false;
         vm.search = search;
         vm.currentPage = 1;
-        vm.maxSize = 4;
-        vm.pageSize = 10;
+        vm.maxSize = paging.maxSize;
+        vm.pageSize = paging.defaultPageSize;
 
         loadUsers(true);
 
