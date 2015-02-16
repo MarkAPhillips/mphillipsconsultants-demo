@@ -19,12 +19,28 @@
         loadUsers(true);
 
         /* Load user data */
-
         function loadUsers(emit) {
             if (emit) {
                 $scope.$emit('load');
             }
-            userFactory.users().get({ skip: recordsToSkip(), top: vm.pageSize }).$promise.then(function(data) {
+            var searchText = vm.searchText;
+
+            var actions = {
+                skip: recordsToSkip(),
+                top: vm.pageSize
+            };
+            
+            var factory = userFactory.users();
+            var resourceMethod;
+            if (searchText) {
+                var filterCommand = 'contains(FirstName, \'' + searchText + '\') or ' + 'contains(LastName, \'' + searchText + '\')';
+                actions.cmd = filterCommand;
+                resourceMethod = factory.search(actions);
+            } else {
+                resourceMethod = factory.get(actions);
+            }
+          
+            resourceMethod.$promise.then(function (data) {
                 vm.users = data.value;
                 vm.totalItems = data['@odata.count'];
                 vm.loaded = true;
@@ -38,22 +54,8 @@
         }
 
         /* Search users */
-
         function search() {
-            vm.currentPage = 1;
-            $rootScope.message = null;
-            vm.loaded = false;
-            var searchText = vm.searchText;
-            var filterCommand = 'contains(FirstName, \'' + searchText + '\') or ' +
-                'contains(LastName, \'' + searchText + '\')';
-
-            userFactory.users().search({ cmd: filterCommand, skip: recordsToSkip(), top: vm.pageSize }).$promise.then(function(data) {
-                vm.users = data.value;
-                vm.totalItems = data['@odata.count'];
-                vm.loaded = true;
-            }, function(error) {
-                $log.error(error);
-            });
+            loadUsers(true);
         }
 
         /* Determine no of records to skip */
