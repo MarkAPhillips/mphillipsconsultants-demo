@@ -17,7 +17,7 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
             _userService = userService;
         }
 
-        [EnableQuery(PageSize = 15, AllowedQueryOptions= AllowedQueryOptions.All)]
+        [EnableQuery(AllowedQueryOptions= AllowedQueryOptions.All)]
         public IQueryable<User> Get()
         {
             return  _userService.GetAsync().AsQueryable();

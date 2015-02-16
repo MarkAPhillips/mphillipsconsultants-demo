@@ -19,8 +19,8 @@
 
             ///* Web API Resources on Users using oData conventions */
             var actions = {
-                'get': { method: 'GET', params: { '$count': true }, url: oDataUrl },
-                'search': { method: 'GET', params: { 'cmd': '@filterCommand','$count': true }, url: oDataUrl + '?$filter=:cmd' },
+                'get': { method: 'GET', params: { 'skip': '@skip', 'top': '@top', '$count': true }, url: oDataUrl + '?$top=:top&$skip=:skip' },
+                'search': { method: 'GET', params: { 'skip': '@skip', 'top': '@top', 'cmd': '@filterCommand', '$count': true }, url: oDataUrl + '?$filter=:cmd&$top=:top&$skip=:skip' },
                 'save': { method: 'POST', url: oDataUrl },
                 'update': { method: 'PUT', params: { key: '@key' }, url: oDataUrl + '(:key)' },
                 'delete': { method: 'DELETE', params: { key: '@key' }, url: oDataUrl + '(:key)' },
