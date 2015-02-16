@@ -55,7 +55,7 @@
 
         /* Search users */
         function search() {
-            loadUsers(true);
+            loadUsers(false);
         }
 
         /* Determine no of records to skip */
