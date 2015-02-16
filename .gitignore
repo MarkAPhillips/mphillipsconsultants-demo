@@ -160,3 +160,4 @@ node_modules/
 /MPhillipsConsultants.Demo.Ui/src/app-constants.js
 /MPhillipsConsultants.Demo.Ui/src/assets/css/theme.css
 .nuget/
+/vendor

@@ -3,7 +3,7 @@ using MPhillipsConsultants.Demo.Model;
 
 namespace MPhillipsConsultants.Demo.Services
 {
-    public  class UserBuilder : IUserBuilder
+    public sealed class UserBuilder : IUserBuilder
     {
         public void Map(User user, User existing)
         {

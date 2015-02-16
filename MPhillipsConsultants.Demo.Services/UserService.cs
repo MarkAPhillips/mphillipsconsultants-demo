@@ -6,7 +6,7 @@ using MPhillipsConsultants.Demo.Model;
 
 namespace MPhillipsConsultants.Demo.Services
 {
-    public class UserService : IUserService
+    public sealed class UserService : IUserService
     {
         private readonly DemoContext _context;
         private readonly IUserBuilder _userBuilder;
