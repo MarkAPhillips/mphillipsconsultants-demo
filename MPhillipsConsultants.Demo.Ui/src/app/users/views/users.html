@@ -46,7 +46,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <pagination total-items="user.totalItems" ng-model="user.currentPage" items-per-page="user.pageSize" ng-change="user.changePage()" max-size="user.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
             </div>
+             
         </div>
     </div>
 </div>
