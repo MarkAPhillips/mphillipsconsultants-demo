@@ -12,6 +12,7 @@
         var vm = this;
         vm.loaded = false;
         vm.search = search;
+        vm.changePage = changePage;
         vm.currentPage = 1;
         vm.maxSize = paging.maxSize;
         vm.pageSize = paging.defaultPageSize;
@@ -53,11 +54,17 @@
             });
         }
 
-        /* Search users */
+        /* Search event */
         function search() {
+            vm.currentPage = 1;
             loadUsers(false);
         }
 
+        /* Change Page event */
+        function changePage() {
+            loadUsers(false);
+        }
+        
         /* Determine no of records to skip */
         function recordsToSkip() {
             var skip = 0;
@@ -67,11 +74,6 @@
             }
             return skip;
         }
-
-        /* Navigate pages */
-        vm.changePage = function() {
-            loadUsers(false);
-        };
 
         /* Delete user from view */
         vm.delete = function(index) {
