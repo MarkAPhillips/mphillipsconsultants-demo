@@ -13,12 +13,11 @@
         vm.loaded = false;
         vm.search = search;
         vm.changePage = changePage;
+        vm.delete = deleteUser;
         vm.currentPage = 1;
         vm.maxSize = queryBuilderFactory.maxSize;
         vm.pageSize = queryBuilderFactory.pageSize;
 
-        $log.log(vm.maxSize);
-        $log.log(vm.pageSize);
         loadUsers(true);
 
         /* Load user data */
@@ -28,7 +27,6 @@
             }
             var searchText = vm.searchText;
             var actions = queryBuilderFactory.actions(vm.currentPage, searchText);
-            console.dir(actions);
             var factory = userFactory.users();
             var resourceMethod;
             if (searchText) {
@@ -62,7 +60,7 @@
         }
         
         /* Delete user from view */
-        vm.delete = function(index) {
+       function deleteUser(index) {
             if (confirm('Click OK to delete the user')) {
                 userFactory.users().delete({ key: index }).$promise.then(function(user) {
                     vm.users = _.reject(vm.users, function(item) { return item.Id === index; });
