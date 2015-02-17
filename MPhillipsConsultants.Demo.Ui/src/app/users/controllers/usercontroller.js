@@ -10,11 +10,17 @@
     function userController($scope, $log, $rootScope, userFactory,queryBuilderFactory, _) {
         /* jshint validthis:true */
         var vm = this;
+        
+        /* Set properties */
         vm.loaded = false;
+        vm.currentPage = 1;
+        
+        /* Define events */
         vm.search = search;
         vm.changePage = changePage;
         vm.delete = deleteUser;
-        vm.currentPage = 1;
+        
+        /* Set default values  */
         vm.maxSize = queryBuilderFactory.maxSize;
         vm.pageSize = queryBuilderFactory.pageSize;
 
