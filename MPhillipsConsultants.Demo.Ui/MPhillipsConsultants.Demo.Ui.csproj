@@ -68,6 +68,7 @@
     <Content Include="src\app\common\views\home.html" />
     <Content Include="src\app\users\controllers\formcontroller.js" />
     <Content Include="src\app\users\controllers\usercontroller.js" />
+    <Content Include="src\app\users\services\querybuilderfactory.js" />
     <Content Include="src\app\users\services\userfactory.js" />
     <Content Include="src\app\users\user-routes.js" />
     <Content Include="src\app\users\views\form.html" />

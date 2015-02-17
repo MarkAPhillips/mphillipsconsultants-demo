@@ -5,18 +5,20 @@
         .module('MPhillipsConsultants.Demo.App.User')
         .controller('userController', userController);
 
-    userController.$inject = ['$scope', '$log', '$rootScope', 'userFactory', '_', 'paging'];
+    userController.$inject = ['$scope', '$log', '$rootScope', 'userFactory','queryBuilderFactory', '_'];
 
-    function userController($scope, $log, $rootScope, userFactory, _, paging) {
+    function userController($scope, $log, $rootScope, userFactory,queryBuilderFactory, _) {
         /* jshint validthis:true */
         var vm = this;
         vm.loaded = false;
         vm.search = search;
         vm.changePage = changePage;
         vm.currentPage = 1;
-        vm.maxSize = paging.maxSize;
-        vm.pageSize = paging.defaultPageSize;
+        vm.maxSize = queryBuilderFactory.maxSize;
+        vm.pageSize = queryBuilderFactory.pageSize;
 
+        $log.log(vm.maxSize);
+        $log.log(vm.pageSize);
         loadUsers(true);
 
         /* Load user data */
@@ -25,17 +27,11 @@
                 $scope.$emit('load');
             }
             var searchText = vm.searchText;
-
-            var actions = {
-                skip: recordsToSkip(),
-                top: vm.pageSize
-            };
-            
+            var actions = queryBuilderFactory.actions(vm.currentPage, searchText);
+            console.dir(actions);
             var factory = userFactory.users();
             var resourceMethod;
             if (searchText) {
-                var filterCommand = 'contains(FirstName, \'' + searchText + '\') or ' + 'contains(LastName, \'' + searchText + '\')';
-                actions.cmd = filterCommand;
                 resourceMethod = factory.search(actions);
             } else {
                 resourceMethod = factory.get(actions);
@@ -65,16 +61,6 @@
             loadUsers(false);
         }
         
-        /* Determine no of records to skip */
-        function recordsToSkip() {
-            var skip = 0;
-            if (vm.currentPage >= 1) {
-                var page = vm.currentPage;
-                skip = --page * vm.pageSize;
-            }
-            return skip;
-        }
-
         /* Delete user from view */
         vm.delete = function(index) {
             if (confirm('Click OK to delete the user')) {
