@@ -20,7 +20,7 @@ namespace MPhillipsConsultants.Demo.WebApi.Controllers
         [EnableQuery(AllowedQueryOptions= AllowedQueryOptions.All)]
         public IQueryable<User> Get()
         {
-            return  _userService.GetAsync().AsQueryable();
+            return  _userService.Get().AsQueryable();
         }
 
         [EnableQuery]

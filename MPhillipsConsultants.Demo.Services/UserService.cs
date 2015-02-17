@@ -41,7 +41,7 @@ namespace MPhillipsConsultants.Demo.Services
             return user;
         }
 
-        public IEnumerable<User> GetAsync()
+        public IEnumerable<User> Get()
         {
             return _context.Users.AsNoTracking();
         }

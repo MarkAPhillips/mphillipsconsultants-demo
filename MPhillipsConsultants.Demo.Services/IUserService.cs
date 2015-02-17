@@ -6,7 +6,7 @@ namespace MPhillipsConsultants.Demo.Services
 {
     public interface IUserService
     {
-        IEnumerable<User> GetAsync();
+        IEnumerable<User> Get();
         Task<User> GetByKeyAsync(int id);
         Task<User> InsertAsync(User user);
         Task<User> DeleteAsync(User user);
