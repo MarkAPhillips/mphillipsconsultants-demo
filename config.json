@@ -5,6 +5,9 @@
 		"paging": {
 			"maxSize": 5,
 			"defaultPageSize": 10
+		},
+		"orderBy":{
+			"userDefault" :"FirstName"
 		}
   }
 }

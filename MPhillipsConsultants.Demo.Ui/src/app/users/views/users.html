@@ -21,17 +21,22 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="table-responsive" ng-if="user.loaded">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Country</th>
-                            <th>IP Address</th>
-                            <th>Last Modified</th>
+                            <th><a href="#" id="link-firstname" ng-click="user.orderBy('FirstName')" title="Sort by First Name">First Name
+                                 <span class="glyphicon" aria-hidden="true"></span></a>
+                            </th>
+                            <th><a href="#" id="link-lastname" ng-click="user.orderBy('LastName')" title="Sort by Last Name">Last Name
+                                 <span class="glyphicon" aria-hidden="true"></span></a></th>
+                            <th><a href="#" id="link-email" ng-click="user.orderBy('Email')" title="Sort by Email">Email
+                                 <span class="glyphicon" aria-hidden="true"></span></a></th>
+                            <th><a href="#" id="link-country" ng-click="user.orderBy('Country')" title="Sort by Country">Country
+                                 <span class="glyphicon" aria-hidden="true"></span></a></th>
+                            <th><a href="#" id="link-ipaddress"  ng-click="user.orderBy('IpAddress')" title="Sort by IP Address">IP Address <span class="glyphicon" aria-hidden="true"></span></a></th>
+                            <th><a href="#" id="link-lastmodified"  ng-click="user.orderBy('LastModified')" title="Sort by Last Modified Date">Last Modified <span class="glyphicon" aria-hidden="true"></span></a</th>
                             <th colspan="2"></th>
                         </tr>
                     </thead>
@@ -50,7 +55,7 @@
                 </table>
                 <pagination total-items="user.totalItems" ng-model="user.currentPage" items-per-page="user.pageSize" ng-change="user.changePage()" max-size="user.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
             </div>
-             
+
         </div>
     </div>
 </div>
