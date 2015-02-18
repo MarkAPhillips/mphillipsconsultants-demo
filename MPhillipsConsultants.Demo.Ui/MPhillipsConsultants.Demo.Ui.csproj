@@ -75,13 +75,13 @@
     <Content Include="src\app\users\views\users.html" />
     <Content Include="src\app\common\views\header.tmpl.html" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="src\assets\images\ajax-loader.gif" />
     <Content Include="src\index.html" />
     <Content Include="src\app\users\usermodule.js" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="src\assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="src\less\theme.less" />
     <Content Include="vendor\angular-animate\angular-animate.js" />
     <Content Include="vendor\angular-animate\angular-animate.min.js" />

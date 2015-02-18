@@ -31,6 +31,7 @@
                             <th>Email</th>
                             <th>Country</th>
                             <th>IP Address</th>
+                            <th>Last Modified</th>
                             <th colspan="2"></th>
                         </tr>
                     </thead>
@@ -41,6 +42,7 @@
                             <td><a ng-href="mailto:{{item.Email}}">{{item.Email}}</a></td>
                             <td>{{item.Country}}</td>
                             <td>{{item.IpAddress}}</td>
+                            <td>{{item.LastModified | date: 'dd/MM/yyyy hh:mm a'}}</td>
                             <td><a ng-href="/users/manage/{{item.Id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                             <td><a href="#" ng-click="user.delete(item.Id)"><span class="glyphicon glyphicon-trash"></span></a></td>
                         </tr>
