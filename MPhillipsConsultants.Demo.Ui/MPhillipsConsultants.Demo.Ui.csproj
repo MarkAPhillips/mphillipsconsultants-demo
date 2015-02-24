@@ -68,6 +68,7 @@
     <Content Include="src\app\common\views\home.html" />
     <Content Include="src\app\users\controllers\formcontroller.js" />
     <Content Include="src\app\users\controllers\usercontroller.js" />
+    <Content Include="src\app\users\directives\sortingdirective.js" />
     <Content Include="src\app\users\services\querybuilderfactory.js" />
     <Content Include="src\app\users\services\userfactory.js" />
     <Content Include="src\app\users\user-routes.js" />
@@ -369,7 +370,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\app\common\tests\" />
-    <Folder Include="src\app\users\directives\" />
     <Folder Include="src\app\users\tests\" />
     <Folder Include="src\assets\css\" />
     <Folder Include="tests\" />
