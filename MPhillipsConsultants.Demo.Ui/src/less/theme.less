@@ -1,6 +1,9 @@
 ﻿/* Main entry point for CSS creation for less files */
 
 @import "bootstrap/bootstrap.less";
+/* Custom variables */
+@animation-delay : 2s;
+@animation-duration: 1s;
 
 /* CSS used to customise Bootstrap for starter template */
 body {
@@ -23,4 +26,12 @@ body {
 
 #noscript-padding {
     padding-top: 1.9em;
+}
+
+/* Animations*/
+.alert {
+  -webkit-animation-duration: @animation-duration !important;
+  -webkit-animation-delay:@animation-delay !important;
+  -moz-animation-duration: @animation-duration !important;
+  -moz-animation-delay: @animation-delay !important;
 }

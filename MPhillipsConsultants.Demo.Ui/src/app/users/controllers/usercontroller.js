@@ -4,14 +4,15 @@
     angular
         .module('MPhillipsConsultants.Demo.App.User')
         .controller('userController', userController);
+      
 
-    userController.$inject = ['$scope', '$log', '$rootScope', 'userFactory', 'queryBuilderFactory', '_'];
+    userController.$inject = ['$scope', '$log', '$rootScope','userFactory', 'queryBuilderFactory', 'external'];
 
-    function userController($scope, $log, $rootScope, userFactory, queryBuilderFactory, _) {
+    function userController($scope, $log, $rootScope, userFactory, queryBuilderFactory, external) {
         /* jshint validthis:true */
         var vm = this;
 
-        /* Set properties */
+        /* Set default properties */
         vm.loaded = false;
         vm.currentPage = 1;
 
@@ -20,6 +21,7 @@
         vm.changePage = changePage;
         vm.delete = deleteUser;
         vm.orderBy = orderBy;
+        vm.message = $rootScope.message;
 
         /* Set default values  */
         vm.maxSize = queryBuilderFactory.maxSize;
@@ -48,7 +50,7 @@
                 vm.loaded = true;
             }, function(error) {
                 $log.error(error);
-            }).finally(function() {
+            }).finally(function () {
                 if (emit) {
                     $scope.$emit('unload');
                 }
@@ -79,12 +81,10 @@
         function deleteUser(index) {
             if (confirm('Click OK to delete the user')) {
                 userFactory.users().delete({ key: index }).$promise.then(function(user) {
-                    vm.users = _.reject(vm.users, function(item) { return item.Id === index; });
-                    $rootScope.message = 'User ' + user.FirstName + ' ' + user.LastName + ' successfully deleted.';
+                    vm.users = external.underscore().reject(vm.users, function(item) { return item.Id === index; });
+                    vm.message = 'User ' + user.FirstName + ' ' + user.LastName + ' successfully deleted.';
                 });
             }
         }
-
-        ;
     }
 })();

@@ -3,7 +3,7 @@
         <div class="col-md-10">
             <h1>Manage Users</h1>
             <div mp-loading-icon></div>
-            <div class="alert alert-success" ng-show="$root.message"><span class="glyphicon glyphicon-ok"></span>&nbsp;{{$root.message}}</div>
+            <mp-alert id="alert" message="{{user.message}}"></mp-alert>
             <div class="input-group col-md-6" ng-if="user.loaded">
                 <input type="text" class="search-query form-control" ng-model="user.searchText" placeholder="Search" />
                 <span class="input-group-btn">
@@ -35,8 +35,8 @@
                                  <span class="glyphicon" aria-hidden="true"></span></a></th>
                             <th><a href="#" id="link-country" ng-click="user.orderBy('Country')" title="Sort by Country">Country
                                  <span class="glyphicon" aria-hidden="true"></span></a></th>
-                            <th><a href="#" id="link-ipaddress"  ng-click="user.orderBy('IpAddress')" title="Sort by IP Address">IP Address <span class="glyphicon" aria-hidden="true"></span></a></th>
-                            <th><a href="#" id="link-lastmodified"  ng-click="user.orderBy('LastModified')" title="Sort by Last Modified Date">Last Modified <span class="glyphicon" aria-hidden="true"></span></a</th>
+                            <th><a href="#" id="link-ipaddress" ng-click="user.orderBy('IpAddress')" title="Sort by IP Address">IP Address <span class="glyphicon" aria-hidden="true"></span></a></th>
+                            <th><a href="#" id="link-lastmodified" ng-click="user.orderBy('LastModified')" title="Sort by Last Modified Date">Last Modified <span class="glyphicon" aria-hidden="true"></span></a></th>
                             <th colspan="2"></th>
                         </tr>
                     </thead>
