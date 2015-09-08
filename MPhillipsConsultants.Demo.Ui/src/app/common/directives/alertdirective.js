@@ -21,7 +21,7 @@
         function link(scope, element) {
             $timeout(function () {
                 element.remove();
-            }, 4000);
+            }, 3000);
 
         }
     }
